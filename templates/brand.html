@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ma-co">
+	{% for item in brand_p %}
+	<a href="{{url_for('name_product', product=item.ID)}}">
+		<div class="produkt-card">	
+			<img src="{{item.Image}}">
+			<p class="produkt-card-praise">{{item.Price}}руб.</p>
+			<p class="produkt-card-descr">{{item.Brand}}  {{item.Name}}</p>
+		</div>
+	</a>
+	{% endfor %}
+</div>
+{% endblock %}

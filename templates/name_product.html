@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="color: white">
+  <h2>{{about_product.Brand}} {{about_product.Name}}</h2>
+  <img src="{{about_product.Image}}">
+  <p>Цена: {{about_product.Price}}.руб</p>
+  <p>{{about_product.Comment}}</p>
+  <div style="margin: 30px 0"><a href="#" class="buy" , data-bs-toggle="modal" data-bs-target="#exampleModal" >Купить</a></div>
+</div>
+
+
+<!-- Модальное окно -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Заказать {{about_product.Brand}} {{about_product.Name}} </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+  		<form action="" method="post">
+	      	<div class="modal-body">
+	      		<div class="zakaz">
+		      		<label for="name">Видите ФИО</label><br>
+		      		<input name="name"><br>
+		      		<label for="phone">Видите номер телефоа</label><br>
+		      		<input name="phone"><br>
+		      		<label for="email">Видите email</label><br>
+		      		<input name="email"><br>
+		      		<label for="address">Видите адрес</label><br>
+		      		<input name="address"><br>
+		      		<input type="submit">
+	      		</div>
+      		</div>
+      		<div class="modal-footer">
+            <iframe src="https://yoomoney.ru/quickpay/button-widget?targets=&default-sum={{about_product.Price}}&button-text=11&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=4100117963906845&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no">
+              <button type="button submit" class="btn btn-primary">Перейти к оплате</button> 
+            </iframe>
+
+
+    		</div>
+     	</form> 
+    </div>
+</div>
+</div>
+
+{% endblock %}

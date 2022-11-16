@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="photo">
+	{% for photo in photos %}
+	<div class="gallery">
+		<img src="{{photo}}">
+	</div>
+	{% endfor %}
+</div>	
+<div class="photo">
+	{% for vidio in vidios %}
+	<div class="gallery">
+		<video controls=>
+			<source src="{{vidio}}">
+		</video>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

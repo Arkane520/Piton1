@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="news-content">
+		<img class="main-img" src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/62ed41d42990efff0b9a2595/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1659802677&Signature=tp2HGFdAfuzqBtNNCgDEgA72jxU%3D">
+	</div>
+	<div class="main-niws">
+		<p class="main-t">Лучьшие скидки<span class="main-t-icon"><img src="/static/images/kr.png"></span></p>
+		<div class="last-act">
+			<div>
+				<p class="last-act-t">Тут есть текст</p>
+				<img src='/static/images/1.jpg'>
+			</div>
+			<div>
+				<video autoplay loop="true" class="w-100">
+					<source src="/static/vidios/132.mp4">	
+				</video>
+				
+			</div>
+			<div><img src='/static/images/1.jpg'></div>
+			<div><img src='/static/images/1.jpg'></div>
+			<div><img src='/static/images/1.jpg'></div>
+		</div>
+	</div>
+	<p class="main-t">Категории<span class="main-t-icon"><img src="/static/images/kr.png"></span></p>
+	<div class="my-brend">
+		<a href="{{url_for('products', brand='Adidas')}}">
+			<div class="it-my-brend">
+				<img src="static/images/12.jpg">
+				<p>Кросовки</p>
+			</div>
+		</a>
+		<a href="{{url_for('products', brand='Nike')}}">
+			<div class="it-my-brend">
+				<img src="static/images/12.jpg">
+				<p>Кеды</p>
+			</div>
+		</a>
+		
+	</div>
+{% endblock %}
